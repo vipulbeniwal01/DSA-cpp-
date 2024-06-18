@@ -29,6 +29,7 @@ struct MyHash {
         int i=key%bucket;
         table[i].remove(key);
     }
+    
 };
 
 int main() {
