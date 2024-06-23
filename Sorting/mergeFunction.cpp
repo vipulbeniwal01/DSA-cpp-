@@ -23,4 +23,5 @@ int main(){
     int arr[] = {1,3,9,7,8,14,20};
     int low = 0, mid = 2, high = 6;
     mergeSort(arr, low, mid, high);
+    return 0;
 }
