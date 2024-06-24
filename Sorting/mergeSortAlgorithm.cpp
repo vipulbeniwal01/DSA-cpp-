@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void mergeSort(int arr[], int low, int mid, int high) {
+void Merge(int arr[], int low, int mid, int high) {
     int n1 = mid - low + 1, n2 = high - mid;
     int left[n1];
     int right[n2];
@@ -27,12 +27,20 @@ void mergeSort(int arr[], int low, int mid, int high) {
     }
 }
 
-int main() {
-    int arr[] = {1, 3, 9, 7, 8, 14, 20};
-    int low = 0, mid = 2, high = 6; // Corrected high value
-    mergeSort(arr, low, mid, high);
-    for(int I = 0; I < 7; I++) { // Corrected loop size and variable
-        cout << arr[I] << " "; // Corrected variable name
+void mergeSort(int arr[], int i, int j){
+    if(i<j){
+        int m = (i+j)/2;
+        mergeSort(arr,i,m);
+        mergeSort(arr,m+1,j);
+        Merge(arr,i,m,j);
+    }
+}
+
+int main(){
+    int arr[] = {3,2,7,6,4,10};
+    mergeSort(arr, 0, 5);
+    for(int i=0; i<6; i++){
+        cout<<arr[i]<<" ";
     }
     return 0;
 }
