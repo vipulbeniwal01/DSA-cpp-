@@ -13,9 +13,9 @@ void lomuto(int arr[], int index){
 }
 
 int main(){
-    int arr[] = {3,2,6,8,5,9,4};
-    lomuto(arr, 6);
-    for(int k=0; k<7; k++){
+    int arr[] = {70,60,80,40,30};
+    lomuto(arr, 4);
+    for(int k=0; k<5; k++){
         cout<<arr[k]<<" ";
     }
     return 0;
