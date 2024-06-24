@@ -27,4 +27,5 @@ int main(){
     return 0;
 }
 
-//In this partition it is not necessary that pivot arrange in its right position but left side of elements are samll then pivot and right side of the elements are large or equal to pivot
+//In this partition it is not necessary that pivot arrange in its right position but left side of elements 
+//are samll then pivot and right side of the elements are large or equal to pivot
