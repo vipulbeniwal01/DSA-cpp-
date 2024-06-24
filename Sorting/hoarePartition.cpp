@@ -19,7 +19,7 @@ void hoare(int arr[], int low, int high){
 }
 
 int main(){
-    int arr[] = {4,2,1,3,6,7,8};
+    int arr[] = {4,2,7,3,6,1,8};
     hoare(arr, 0, 6);
     for(int i=0; i<7; i++){
         cout<<arr[i]<<" ";
