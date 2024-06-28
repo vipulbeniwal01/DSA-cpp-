@@ -10,19 +10,31 @@ struct Node{
     }
 };
 
+// int middle(Node *head){
+//     if(head==NULL) return -1;
+//     int a=1;
+//     Node *ptr = head;
+//     while(ptr->next != NULL){
+//         a++;
+//         ptr=ptr->next;
+//     }
+//     int mid = a/2+1;
+//     Node *ans = head;
+//     for(int i=1; i<mid; i++){
+//         ans=ans->next;
+//     }
+//     return ans->data;
+// }
+
 int middle(Node *head){
-    int a=1;
-    Node *ptr = head;
-    while(ptr->next != NULL){
-        a++;
-        ptr=ptr->next;
+    if(head == NULL) return -1;
+    Node *slow = head;
+    Node *fast = head;
+    while(fast != NULL and fast->next != NULL){
+        slow = slow->next;
+        fast = fast->next->next;
     }
-    int mid = a/2+1;
-    Node *ans = head;
-    for(int i=1; i<mid; i++){
-        ans=ans->next;
-    }
-    return ans->data;
+    return slow->data;
 }
 
 int main(){
