@@ -12,12 +12,8 @@ struct Queue{
         sz = a;
     }
 
-    void enqueue(int a){
-        rear++;
-        arr[rear] = a;
-    }
-
     void dequeue(){
+        if(isEmpty()) return;
         for(int i=1; i<=rear; i++){
             arr[i-1] = arr[i];
         }
@@ -32,7 +28,7 @@ struct Queue{
         return arr[rear];
     }
 
-    bool ifFull(){
+    bool isFull(){
         return rear == sz-1;
     }
 
@@ -43,6 +39,15 @@ struct Queue{
     int size(){
         return rear+1;
     }
+
+    void enqueue(int a){
+        if(isFull()){
+            return;
+        }
+        rear++;
+        arr[rear] = a;
+    }
+
 };
 
 int main(){
@@ -55,7 +60,7 @@ int main(){
     int b = q.getRear();
     cout<<b<<endl;
     cout<<q.isEmpty()<<endl;
-    cout<<q.ifFull()<<endl;
+    cout<<q.isFull()<<endl;
     cout<<q.size()<<endl;
     q.dequeue();
     cout<<q.getFront()<<endl;
