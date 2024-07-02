@@ -35,6 +35,5 @@ int main(){
     for(int i=0; i<height(root); i++){
         primeNodes(root, i+1);
         cout<<endl;
-        
     }
 }
