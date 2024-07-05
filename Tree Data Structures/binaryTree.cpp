@@ -16,4 +16,5 @@ int main(){
     root->left = new Node(20);
     root->right = new Node(30);
     root->left->left = new Node (40);
+    
 }
