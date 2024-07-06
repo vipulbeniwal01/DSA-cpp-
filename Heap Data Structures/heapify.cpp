@@ -2,11 +2,10 @@
 using namespace std;
 
 class MinHeap{
+    public:
     int *arr;
     int size;
     int capacity;
-
-    public:
 
     MinHeap(int a){
         arr = new int[a];
@@ -36,17 +35,17 @@ class MinHeap{
             i = parent(i);
         }
     }
-    void heapify(int i){
+    void heapify(int i) {
         int smallest = i;
         int lt = left(i), rt = right(i);
-        if(lt<size and arr[lt]<arr[i]){
+        if (lt < size && arr[lt] < arr[smallest]) { 
             smallest = lt;
         }
-        if(rt<size and arr[rt]<arr[smallest]){
+        if (rt < size && arr[rt] < arr[smallest]) {
             smallest = rt;
         }
-        if(smallest!=i){
-            swap(arr[i],arr[smallest]);
+        if (smallest != i) {
+            swap(arr[i], arr[smallest]);
             heapify(smallest);
         }
     }
@@ -59,4 +58,9 @@ int main(){
     MinHeap h(2);
     h.insert(20);
     h.insert(10);
+    h.arr[0]=40;
+    cout<<h.arr[0]<<endl;
+    h.heapify(0);
+    cout<<h.arr[0]<<endl;
+    return 0;
 }
