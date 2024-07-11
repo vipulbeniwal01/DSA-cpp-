@@ -13,5 +13,26 @@ int main(){
         cout<<q.top()<<" ";
         q.pop();
     }
+    cout<<endl;
+
+    priority_queue<int, vector<int>, greater<int> > w;
+    w.push(10);
+    w.push(6);
+    w.push(9);
+    w.push(12);
+    w.push(15);
+    while(w.empty()==false){
+        cout<<w.top()<<" ";
+        w.pop();
+    }
+    cout<<endl;
+
+    int arr[] = {10,20,30,40};
+    priority_queue<int> e(arr,arr+4);
+    while(e.empty()==false){
+        cout<<e.top()<<" ";
+        e.pop();
+    }
+    cout<<endl;
     return 0;
 }
