@@ -1,7 +1,3 @@
 {
-    "C_Cpp.default.compilerPath": "/usr/bin/clang",
-    "files.associations": {
-        "unordered_map": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.default.compilerPath": "/usr/bin/clang"
 }
